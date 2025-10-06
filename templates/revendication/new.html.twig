@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Revendication{% endblock %}
+
+{% block body %}
+    <h1>Create new Revendication</h1>
+
+    {{ include('revendication/_form.html.twig') }}
+
+    <a href="{{ path('app_revendication_index') }}">back to list</a>
+{% endblock %}

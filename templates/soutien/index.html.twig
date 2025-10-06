@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Soutien index{% endblock %}
+
+{% block body %}
+    <h1>Soutien index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for soutien in soutiens %}
+            <tr>
+                <td>{{ soutien.id }}</td>
+                <td>{{ soutien.nom }}</td>
+                <td>{{ soutien.email }}</td>
+                <td>{{ soutien.message }}</td>
+                <td>
+                    <a href="{{ path('app_soutien_show', {'id': soutien.id}) }}">show</a>
+                    <a href="{{ path('app_soutien_edit', {'id': soutien.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_soutien_new') }}">Create new</a>
+{% endblock %}

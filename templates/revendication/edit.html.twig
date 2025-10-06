@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Revendication{% endblock %}
+
+{% block body %}
+    <h1>Edit Revendication</h1>
+
+    {{ include('revendication/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_revendication_index') }}">back to list</a>
+
+    {{ include('revendication/_delete_form.html.twig') }}
+{% endblock %}

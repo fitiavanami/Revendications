@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Revendication{% endblock %}
+
+{% block body %}
+    <h1>Revendication</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ revendication.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ revendication.titre }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ revendication.description }}</td>
+            </tr>
+            <tr>
+                <th>DateCreation</th>
+                <td>{{ revendication.dateCreation ? revendication.dateCreation|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Status</th>
+                <td>{{ revendication.status }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_revendication_index') }}">back to list</a>
+
+    <a href="{{ path('app_revendication_edit', {'id': revendication.id}) }}">edit</a>
+
+    {{ include('revendication/_delete_form.html.twig') }}
+{% endblock %}
