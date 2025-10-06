@@ -1442,6 +1442,6 @@ class __TwigTemplate_dc323fd02ab320b4de3b675b1f9b7f0b extends Template
 
     Sfjs.loadToolbar('{{ token }}');
 /*]]>*/</script>
-", "@WebProfiler/Profiler/toolbar_js.html.twig", "/home/fitiavana/Musique/symfony/hafa/revendications/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
+", "@WebProfiler/Profiler/toolbar_js.html.twig", "/home/fitiavana/Musique/Revendications/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
     }
 }

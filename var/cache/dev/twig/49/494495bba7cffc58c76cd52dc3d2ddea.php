@@ -97,121 +97,81 @@ class __TwigTemplate_e42f898f67e3dee798db02d914fa8319 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "<div class=\"container mt-5\">
-    <h1 class=\"mb-4\">Revendications</h1>
+        yield "    <h1>Revendication index</h1>
 
-    <div class=\"mb-3 text-end\">
-        <a href=\"";
-        // line 10
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_revendication_new");
-        yield "\" class=\"btn btn-primary\">
-            <i class=\"bi bi-plus-lg\"></i> Créer une nouvelle revendication
-        </a>
-    </div>
-
-    <div class=\"table-responsive\">
-        <table class=\"table table-striped table-hover align-middle\">
-            <thead class=\"table-dark\">
-                <tr>
-                    <th>Id</th>
-                    <th>Titre</th>
-                    <th>Description</th>
-                    <th>Date de création</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-            ";
-        // line 28
+    <table class=\"table\">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>DateCreation</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        ";
+        // line 20
         $context['_parent'] = $context;
-        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["revendications"]) || array_key_exists("revendications", $context) ? $context["revendications"] : (function () { throw new RuntimeError('Variable "revendications" does not exist.', 28, $this->source); })()));
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["revendications"]) || array_key_exists("revendications", $context) ? $context["revendications"] : (function () { throw new RuntimeError('Variable "revendications" does not exist.', 20, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["revendication"]) {
+            // line 21
+            yield "            <tr>
+                <td>";
+            // line 22
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "id", [], "any", false, false, false, 22), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 23
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "titre", [], "any", false, false, false, 23), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 24
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "description", [], "any", false, false, false, 24), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 25
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "dateCreation", [], "any", false, false, false, 25), "html", null, true);
+            yield "</td>
+                <td>";
+            // line 26
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "status", [], "any", false, false, false, 26), "html", null, true);
+            yield "</td>
+                <td>
+                    <a href=\"";
+            // line 28
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_revendication_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            yield "\">show</a>
+                    <a href=\"";
             // line 29
-            yield "                <tr>
-                    <td>";
-            // line 30
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "id", [], "any", false, false, false, 30), "html", null, true);
-            yield "</td>
-                    <td>";
-            // line 31
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "titre", [], "any", false, false, false, 31), "html", null, true);
-            yield "</td>
-                    <td>";
-            // line 32
-            yield (((Twig\Extension\CoreExtension::length($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "description", [], "any", false, false, false, 32)) > 50)) ? ($this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((Twig\Extension\CoreExtension::slice($this->env->getCharset(), CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "description", [], "any", false, false, false, 32), 0, 50) . "..."), "html", null, true)) : ($this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "description", [], "any", false, false, false, 32), "html", null, true)));
-            yield "</td>
-                    <td>";
-            // line 33
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Twig\Extension\CoreExtension']->formatDate(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "dateCreation", [], "any", false, false, false, 33), "d/m/Y H:i"), "html", null, true);
-            yield "</td>
-                    <td>
-                        ";
-            // line 35
-            if ((CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "status", [], "any", false, false, false, 35) == "En attente")) {
-                // line 36
-                yield "                            <span class=\"badge bg-warning text-dark\">";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "status", [], "any", false, false, false, 36), "html", null, true);
-                yield "</span>
-                        ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 37
-$context["revendication"], "status", [], "any", false, false, false, 37) == "Approuvé")) {
-                // line 38
-                yield "                            <span class=\"badge bg-success\">";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "status", [], "any", false, false, false, 38), "html", null, true);
-                yield "</span>
-                        ";
-            } elseif ((CoreExtension::getAttribute($this->env, $this->source,             // line 39
-$context["revendication"], "status", [], "any", false, false, false, 39) == "Rejeté")) {
-                // line 40
-                yield "                            <span class=\"badge bg-danger\">";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "status", [], "any", false, false, false, 40), "html", null, true);
-                yield "</span>
-                        ";
-            } else {
-                // line 42
-                yield "                            <span class=\"badge bg-secondary\">";
-                yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "status", [], "any", false, false, false, 42), "html", null, true);
-                yield "</span>
-                        ";
-            }
-            // line 44
-            yield "                    </td>
-                    <td>
-                        <a href=\"";
-            // line 46
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_revendication_show", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "id", [], "any", false, false, false, 46)]), "html", null, true);
-            yield "\" class=\"btn btn-sm btn-info text-white\">
-                            <i class=\"bi bi-eye\"></i> Voir
-                        </a>
-                        <a href=\"";
-            // line 49
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_revendication_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "id", [], "any", false, false, false, 49)]), "html", null, true);
-            yield "\" class=\"btn btn-sm btn-warning text-white\">
-                            <i class=\"bi bi-pencil\"></i> Éditer
-                        </a>
-                    </td>
-                </tr>
-            ";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_revendication_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["revendication"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            yield "\">edit</a>
+                </td>
+            </tr>
+        ";
             $context['_iterated'] = true;
         }
-        // line 54
+        // line 32
         if (!$context['_iterated']) {
-            // line 55
-            yield "                <tr>
-                    <td colspan=\"6\" class=\"text-center\">Aucun enregistrement trouvé</td>
-                </tr>
-            ";
+            // line 33
+            yield "            <tr>
+                <td colspan=\"6\">no records found</td>
+            </tr>
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['revendication'], $context['_parent'], $context['_iterated']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 59
-        yield "            </tbody>
-        </table>
-    </div>
-</div>
+        // line 37
+        yield "        </tbody>
+    </table>
+
+    <a href=\"";
+        // line 40
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_revendication_new");
+        yield "\">Create new</a>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -243,7 +203,7 @@ $context["revendication"], "status", [], "any", false, false, false, 39) == "Rej
      */
     public function getDebugInfo(): array
     {
-        return array (  211 => 59,  202 => 55,  200 => 54,  190 => 49,  184 => 46,  180 => 44,  174 => 42,  168 => 40,  166 => 39,  161 => 38,  159 => 37,  154 => 36,  152 => 35,  147 => 33,  143 => 32,  139 => 31,  135 => 30,  132 => 29,  127 => 28,  106 => 10,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
+        return array (  173 => 40,  168 => 37,  159 => 33,  157 => 32,  149 => 29,  145 => 28,  140 => 26,  136 => 25,  132 => 24,  128 => 23,  124 => 22,  121 => 21,  116 => 20,  100 => 6,  87 => 5,  64 => 3,  41 => 1,);
     }
 
     public function getSourceContext(): Source
@@ -253,65 +213,42 @@ $context["revendication"], "status", [], "any", false, false, false, 39) == "Rej
 {% block title %}Revendication index{% endblock %}
 
 {% block body %}
-<div class=\"container mt-5\">
-    <h1 class=\"mb-4\">Revendications</h1>
+    <h1>Revendication index</h1>
 
-    <div class=\"mb-3 text-end\">
-        <a href=\"{{ path('app_revendication_new') }}\" class=\"btn btn-primary\">
-            <i class=\"bi bi-plus-lg\"></i> Créer une nouvelle revendication
-        </a>
-    </div>
+    <table class=\"table\">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>DateCreation</th>
+                <th>Status</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for revendication in revendications %}
+            <tr>
+                <td>{{ revendication.id }}</td>
+                <td>{{ revendication.titre }}</td>
+                <td>{{ revendication.description }}</td>
+                <td>{{ revendication.dateCreation }}</td>
+                <td>{{ revendication.status }}</td>
+                <td>
+                    <a href=\"{{ path('app_revendication_show', {'id': revendication.id}) }}\">show</a>
+                    <a href=\"{{ path('app_revendication_edit', {'id': revendication.id}) }}\">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan=\"6\">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-    <div class=\"table-responsive\">
-        <table class=\"table table-striped table-hover align-middle\">
-            <thead class=\"table-dark\">
-                <tr>
-                    <th>Id</th>
-                    <th>Titre</th>
-                    <th>Description</th>
-                    <th>Date de création</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for revendication in revendications %}
-                <tr>
-                    <td>{{ revendication.id }}</td>
-                    <td>{{ revendication.titre }}</td>
-                    <td>{{ revendication.description|length > 50 ? revendication.description|slice(0, 50) ~ '...' : revendication.description }}</td>
-                    <td>{{ revendication.dateCreation|date('d/m/Y H:i') }}</td>
-                    <td>
-                        {% if revendication.status == 'En attente' %}
-                            <span class=\"badge bg-warning text-dark\">{{ revendication.status }}</span>
-                        {% elseif revendication.status == 'Approuvé' %}
-                            <span class=\"badge bg-success\">{{ revendication.status }}</span>
-                        {% elseif revendication.status == 'Rejeté' %}
-                            <span class=\"badge bg-danger\">{{ revendication.status }}</span>
-                        {% else %}
-                            <span class=\"badge bg-secondary\">{{ revendication.status }}</span>
-                        {% endif %}
-                    </td>
-                    <td>
-                        <a href=\"{{ path('app_revendication_show', {'id': revendication.id}) }}\" class=\"btn btn-sm btn-info text-white\">
-                            <i class=\"bi bi-eye\"></i> Voir
-                        </a>
-                        <a href=\"{{ path('app_revendication_edit', {'id': revendication.id}) }}\" class=\"btn btn-sm btn-warning text-white\">
-                            <i class=\"bi bi-pencil\"></i> Éditer
-                        </a>
-                    </td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan=\"6\" class=\"text-center\">Aucun enregistrement trouvé</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</div>
+    <a href=\"{{ path('app_revendication_new') }}\">Create new</a>
 {% endblock %}
-
-", "revendication/index.html.twig", "/home/fitiavana/Musique/symfony/hafa/revendications/templates/revendication/index.html.twig");
+", "revendication/index.html.twig", "/home/fitiavana/Musique/Revendications/templates/revendication/index.html.twig");
     }
 }

@@ -18,3 +18,10 @@ af1ad4,127.0.0.1,GET,http://127.0.0.1:8000/revendication/new,1759761383,,200,req
 8ef89f,127.0.0.1,GET,http://127.0.0.1:8000/revendication/new,1759761425,,200,request
 afc981,127.0.0.1,GET,http://127.0.0.1:8000/revendication,1759761426,,200,request
 48fe14,127.0.0.1,GET,http://127.0.0.1:8000/revendication/new,1759761429,,200,request
+6d746f,127.0.0.1,GET,http://127.0.0.1:8001/,1759768990,,404,request
+daf043,127.0.0.1,GET,http://127.0.0.1:8001/revendication,1759769003,,200,request
+b395bc,127.0.0.1,GET,http://127.0.0.1:8001/,1759769394,,404,request
+b9e228,127.0.0.1,GET,http://127.0.0.1:8001/revendication,1759769406,,200,request
+6ba83e,127.0.0.1,GET,http://127.0.0.1:8001/dashboard,1759769464,407bdf,500,request
+407bdf,127.0.0.1,GET,http://127.0.0.1:8001/dashboard,1759769464,,500,request
+650f98,127.0.0.1,GET,http://127.0.0.1:8001/revendication,1759769475,,200,request

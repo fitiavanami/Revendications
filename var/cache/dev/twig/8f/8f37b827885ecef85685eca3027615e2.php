@@ -927,6 +927,6 @@ class __TwigTemplate_8add2b2a30b3620c886bed8b081c27a8 extends Template
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "/home/fitiavana/Musique/symfony/hafa/revendications/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "/home/fitiavana/Musique/Revendications/vendor/symfony/web-profiler-bundle/Resources/views/Collector/translation.html.twig");
     }
 }

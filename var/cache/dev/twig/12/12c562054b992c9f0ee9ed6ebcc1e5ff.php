@@ -1743,6 +1743,6 @@ $context["voter_detail"], "vote", [], "array", false, false, false, 483) == Twig
         </div>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/home/fitiavana/Musique/symfony/hafa/revendications/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
+", "@Security/Collector/security.html.twig", "/home/fitiavana/Musique/Revendications/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
     }
 }
