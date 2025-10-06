@@ -14,9 +14,7 @@ class RevendicationType extends AbstractType
         $builder
             ->add('titre')
             ->add('description')
-            ->add('dateCreation', null, [
-                'widget' => 'single_text',
-            ])
+            ->add('dateCreation')
             ->add('status')
         ;
     }

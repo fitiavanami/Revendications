@@ -23,10 +23,6 @@ class Soutien
     #[ORM\Column(type: Types::TEXT)]
     private ?string $message = null;
 
-    #[ORM\ManyToOne(inversedBy: 'soutiens')]
-    #[ORM\JoinColumn(nullable: true)]
-    private ?\App\Entity\Revendication $revendication = null;
-
     public function getId(): ?int
     {
         return $this->id;
@@ -64,18 +60,6 @@ class Soutien
     public function setMessage(string $message): static
     {
         $this->message = $message;
-
-        return $this;
-    }
-
-    public function getRevendication(): ?\App\Entity\Revendication
-    {
-        return $this->revendication;
-    }
-
-    public function setRevendication(?\App\Entity\Revendication $revendication): static
-    {
-        $this->revendication = $revendication;
 
         return $this;
     }

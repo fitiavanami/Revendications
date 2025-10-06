@@ -11,8 +11,8 @@ use App\Repository\CategorieRepository;
 final class DashboardController extends AbstractController
 {
     #[Route('/dashboard', name: 'app_dashboard')]
-    public function index(RevendicationRepository $revRepo, CategorieRepository $catRepo): Response
-    {
+public function index(RevendicationRepository $revRepo, CategorieRepository $catRepo): Response
+{
     $stats = [];
     foreach ($catRepo->findAll() as $cat) {
         $stats[] = [

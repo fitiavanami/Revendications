@@ -5,10 +5,6 @@ namespace App\Entity;
 use App\Repository\RevendicationRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use App\Entity\Categorie;
-use App\Entity\Soutien;
 
 #[ORM\Entity(repositoryClass: RevendicationRepository::class)]
 class Revendication
@@ -24,18 +20,11 @@ class Revendication
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
 
-    #[ORM\Column]
-    private ?\DateTimeImmutable $dateCreation = null;
+    #[ORM\Column(length: 255)]
+    private ?string $dateCreation = null;
 
     #[ORM\Column(length: 255)]
     private ?string $status = null;
-
-    #[ORM\ManyToOne(inversedBy: 'revendications')]
-    #[ORM\JoinColumn(nullable: true)]
-    private ?Categorie $categorie = null;
-
-    #[ORM\OneToMany(mappedBy: 'revendication', targetEntity: Soutien::class, orphanRemoval: true)]
-    private Collection $soutiens;
 
     public function getId(): ?int
     {
@@ -66,12 +55,12 @@ class Revendication
         return $this;
     }
 
-    public function getDateCreation(): ?\DateTimeImmutable
+    public function getDateCreation(): ?string
     {
         return $this->dateCreation;
     }
 
-    public function setDateCreation(\DateTimeImmutable $dateCreation): static
+    public function setDateCreation(string $dateCreation): static
     {
         $this->dateCreation = $dateCreation;
 
@@ -86,52 +75,6 @@ class Revendication
     public function setStatus(string $status): static
     {
         $this->status = $status;
-
-        return $this;
-    }
-
-    public function __construct()
-    {
-        $this->soutiens = new ArrayCollection();
-    }
-
-    public function getCategorie(): ?Categorie
-    {
-        return $this->categorie;
-    }
-
-    public function setCategorie(?Categorie $categorie): static
-    {
-        $this->categorie = $categorie;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Soutien>
-     */
-    public function getSoutiens(): Collection
-    {
-        return $this->soutiens;
-    }
-
-    public function addSoutien(Soutien $soutien): static
-    {
-        if (! $this->soutiens->contains($soutien)) {
-            $this->soutiens->add($soutien);
-            $soutien->setRevendication($this);
-        }
-
-        return $this;
-    }
-
-    public function removeSoutien(Soutien $soutien): static
-    {
-        if ($this->soutiens->removeElement($soutien)) {
-            if ($soutien->getRevendication() === $this) {
-                $soutien->setRevendication(null);
-            }
-        }
 
         return $this;
     }
